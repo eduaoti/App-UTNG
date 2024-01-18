@@ -1,0 +1,241 @@
+###CONSULTA USUARIO
+POST http://localhost:4000/login/1222100424
+
+Content-Type: application/json
+{
+    "contrasena": 123
+  }
+#/*USUARIO*/
+### Consulta todos los usuarios
+GET http://localhost:4000/usuario
+
+### Consulta un usuario
+GET http://localhost:4000/usuario/4
+
+### Agregar un usuario
+POST http://localhost:4000/usuario
+Content-Type: application/json
+
+   {
+    "nombre": "Luis",
+    "ap_paterno": "Valtierra ",
+    "ap_materno": "Juarez",
+    "correo": "luisvj@gmail.com",
+    "contraseña": "154",
+    "tipo": "Alumno",
+    "id_carrera": 5
+  }
+
+### Actualizar un usuario
+POST  http://localhost:4000/login/Eduardo
+Content-Type: application/json
+
+  {
+    "contrasena": "123456789"
+  }
+
+### Eliminar un usuario
+DELETE http://localhost:4000/login/8
+Content-Type: application/json
+
+
+#/*EDITORIAL*/
+### Consulta todas  las editoriales
+GET http://localhost:4000/editorial
+
+### Consulta una editorial
+GET http://localhost:4000/editorial/11
+
+### Agregar una editorial
+POST http://localhost:4000/editorial
+Content-Type: application/json
+
+  {
+    "id_editorial": 11,
+    "nombre_editorial": "Días de Santos"
+  }
+
+### Actualizar una editorial
+PUT http://localhost:4000/editorial/11
+Content-Type: application/json
+
+  {
+    "nombre_editorial": "Santos"
+  }
+
+### Eliminar una editorial
+DELETE http://localhost:4000/editorial/11
+Content-Type: application/json
+
+
+#/*LIBRO*/
+### Consulta todos los libros
+GET http://localhost:4000/libro
+
+### Consulta un libro
+GET http://localhost:4000/libro/1
+
+
+### Agregar un libro
+POST http://localhost:4000/libro
+Content-Type: application/json
+
+   {
+    "id_libro": 2,
+    "id_tipo": 3,
+    "titulo": "Cien Años ",
+    "autor": "Gabriel García Márquez",
+    "id_editorial": 1,
+    "id_categoria": 100,
+    "edicion": 1,
+    "volumen": null,
+    "ubicacion": "101",
+    "fecha_publicacion": "2023-08-08T06:00:00.000Z",
+    "lugar_publicacion": "México",
+    "foto": {
+    }
+  }
+
+### Actualizar un libro
+PUT http://localhost:4000/libro/22
+Content-Type: application/json
+
+  {
+    "id_tipo": 22,
+    "tipo_material": " CD-DVD-Bluray"
+  }
+
+### Eliminar un libro
+DELETE http://localhost:4000/libro/3
+Content-Type: application/json
+
+
+#/*TIPO*/
+### Consulta todos los tipos
+GET http://localhost:4000/tipo
+
+### Consulta un tipo
+GET http://localhost:4000/tipo/22
+
+### Agregar un tipo
+POST http://localhost:4000/tipo
+Content-Type: application/json
+
+   {
+    "id_tipo": 22,
+    "nombre_tipo": "Videos CD-DVD-Bluray"
+  }
+
+### Actualizar un tipo
+PUT http://localhost:4000/tipo/22
+Content-Type: application/json
+
+  {
+    "id_tipo": 22,
+    "nombre_tipo": " CD-DVD-Bluray"
+  }
+
+### Eliminar un tipo
+DELETE http://localhost:4000/tipo/22
+Content-Type: application/json
+
+
+#/*CARRERAS*/
+### Consulta todas las carreras
+GET http://localhost:4000/carrera
+
+### Consulta una carrera
+GET http://localhost:4000/carrera/NV
+
+### Agregar una carrera
+POST http://localhost:4000/carrera
+Content-Type: application/json
+
+  {
+    "id_carrera": "NVA",
+    "carrera": " Digitales",
+    "area": "TICS"
+  }
+
+### Actualizar un usuario
+PUT http://localhost:4000/carrera/NVA
+Content-Type: application/json
+
+  {
+    "id_carrera": "NV",
+    "carrera": " DigitaleAAAs",
+    "area": "TICS"
+  }
+
+### Eliminar una carrera
+DELETE http://localhost:4000/carrera/NV
+Content-Type: application/json
+
+
+#/*CATEGORIAS*/
+### Consulta todas las categorias
+GET http://localhost:4000/categoria
+
+### Consulta una categoria
+GET http://localhost:4000/categoria/1300
+
+### Agregar una categoria
+POST http://localhost:4000/categoria
+Content-Type: application/json
+
+  {
+    "id_categoria": 1300,
+    "categoria": "Nueva Categoria"
+  }
+
+### Actualizar una categoria
+PUT http://localhost:4000/categoria/1300
+Content-Type: application/json
+
+  {
+    "id_categoria": 1300,
+    "categoria": "Nueva "
+  }
+
+### Eliminar una carrera
+DELETE http://localhost:4000/categoria/1300
+Content-Type: application/json
+
+#/*PRESTAMO*/
+### Consulta todos los prestamos
+GET http://localhost:4000/prestamo
+
+### Consulta un prestamo
+GET http://localhost:4000/prestamo/2
+
+### Agregar un prestamo
+POST http://localhost:4000/prestamo
+Content-Type: application/json
+
+  {
+    "id_prestamo": 2,
+    "id_usuario": 1222100464,
+    "id_libro": 1,
+    "fecha_prestamo": "2023-08-01T06:00:00.000Z",
+    "fecha_devolucion": "2023-08-24T06:00:00.000Z",
+    "fecha_entrega": null,
+    "estado": "Prestado"
+  }
+
+### Actualizar un prestamo
+PUT http://localhost:4000/prestamo/2
+Content-Type: application/json
+
+  {
+    "id_prestamo": 2,
+    "id_usuario": 1222100464,
+    "id_libro": 1,
+    "fecha_prestamo": "2023-08-01T06:00:00.000Z",
+    "fecha_devolucion": "2023-08-24T06:00:00.000Z",
+    "fecha_entrega": null,
+    "estado": "Devuelto"
+  }
+
+### Eliminar un prestamo
+DELETE http://localhost:4000/prestamo/2
+Content-Type: application/json
